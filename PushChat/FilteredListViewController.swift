@@ -11,11 +11,11 @@ import UIKit;
 
 class FilteredListViewController : ListViewController, UISearchBarDelegate, UISearchDisplayDelegate, SearchBarProtocol{
     
-    var filterSearch: UISearchBar!
+    var filterSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        filterSearch.delegate=self;
+
     }
     
     func filteredSearchOn(searchText: NSString) -> Void{
@@ -56,7 +56,7 @@ class FilteredListViewController : ListViewController, UISearchBarDelegate, UISe
     
     private func cancelSearchBar(){
         
-        self.filterSearch.text = "";
-        self.filterSearch.resignFirstResponder();
+        self.filterSearchBar.text = "";
+        self.filterSearchBar.resignFirstResponder();
     }
 }

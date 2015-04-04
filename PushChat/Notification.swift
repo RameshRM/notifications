@@ -8,14 +8,16 @@
 
 import Foundation
 
-public class Notification{
+public class Notification : NSObject{
     var message: NSString?;
-    var description: NSString?;
-    var receivedDt: NSDate;
+    var receivedDt: NSDate?;
+    
+    override init(){
+        super.init();
+    }
     
     init(message:NSString, description: NSString, receivedDt: NSDate){
         self.message = message;
-        self.description = description;
         self.receivedDt = receivedDt;
     }
     
@@ -25,23 +27,29 @@ public class Notification{
         });
     }
     
-    class func all()-> [Notification]{
-        subscribe();
+    func addNotifications(message: NSNotification) -> Void{
+        println("Adding Notifications\(message)");
+    }
+    
+    
+    class func all(callback:() -> Void)-> [Notification]{
+        var notification:NSDictionary = ["message": "helloworld"];
         var notifications = Notifications.instance.all();
         if(notifications.count==0){
-            mock();
+//            mock();
         }
+        
+        callback();
         return Notifications.instance.all();
     }
     
     class func subscribe() -> Void{
+        println("Subscribing to message");
         NSNotificationCenter.defaultCenter().removeObserver(self);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "subscribe:", name: Constants.Mail, object: nil)
+        //        NSNotificationCenter.defaultCenter().addObserver(Notification., selector: "subscribe", name: Constants.Mail, object: nil)
     }
     
-    class func subscribe(message: NSNotification) -> Void{
-        println(message);
-    }
+ 
     
     class func mock()-> [Notification]{
         var notification:Notification?;
@@ -53,4 +61,4 @@ public class Notification{
         var notifications = Notifications.instance.all();
         return notifications;
     }
-}
+};

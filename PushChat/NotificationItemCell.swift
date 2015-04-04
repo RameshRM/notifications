@@ -9,9 +9,9 @@
 import UIKit
 
 class NotificationItemCell: UITableViewCell {
-    
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var receivedDt: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,8 +31,7 @@ class NotificationItemCell: UITableViewCell {
     func dataBind(notifcation: Notification){
         self.message.text = notifcation.message;
         let dateFormat = NSDateFormatter();
-        dateFormat.dateFormat = "MMM-dd-yyyy";
-        
-        self.receivedDt.text =  dateFormat.stringFromDate(notifcation.receivedDt);
+        dateFormat.dateFormat = "MM-dd-yy hh:mm a";
+        self.receivedDt.text =  dateFormat.stringFromDate(notifcation.receivedDt!);
     }
 }
