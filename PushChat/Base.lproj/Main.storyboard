@@ -32,29 +32,33 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aKb-0y-BQt" id="43O-zJ-cDo">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w5-Q5-iZH">
-                                                    <rect key="frame" x="10" y="9" width="48.5" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-3Q-YOG">
-                                                    <rect key="frame" x="554" y="12" width="35.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moo-Gu-I4s">
+                                                    <rect key="frame" x="10" y="0.0" width="580" height="35"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="gpd-f4-9q3"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment>
+                                                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="5w5-Q5-iZH" firstAttribute="leading" secondItem="43O-zJ-cDo" secondAttribute="leading" constant="10" id="NTj-Z1-BML"/>
-                                                <constraint firstAttribute="centerY" secondItem="jf5-3Q-YOG" secondAttribute="centerY" constant="1.25" id="RsI-C7-wXK"/>
-                                                <constraint firstAttribute="trailing" secondItem="jf5-3Q-YOG" secondAttribute="trailing" constant="10" id="TDt-lW-clv"/>
-                                                <constraint firstAttribute="centerY" secondItem="5w5-Q5-iZH" secondAttribute="centerY" constant="0.25" id="cbw-Sq-u9v"/>
+                                                <constraint firstItem="Moo-Gu-I4s" firstAttribute="leading" secondItem="43O-zJ-cDo" secondAttribute="leading" constant="10" id="eWh-Y0-U3B"/>
+                                                <constraint firstItem="Moo-Gu-I4s" firstAttribute="top" secondItem="43O-zJ-cDo" secondAttribute="top" id="oCE-hI-dGd"/>
+                                                <constraint firstAttribute="trailing" secondItem="Moo-Gu-I4s" secondAttribute="trailing" constant="10" id="uAO-jM-ifK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="message" destination="5w5-Q5-iZH" id="JEF-Zp-wXe"/>
-                                            <outlet property="receivedDt" destination="jf5-3Q-YOG" id="DSi-yF-Jg6"/>
+                                            <outlet property="message" destination="Moo-Gu-I4s" id="AgZ-w9-Y42"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

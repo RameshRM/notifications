@@ -9,9 +9,8 @@
 import UIKit
 
 class NotificationItemCell: UITableViewCell {
-    @IBOutlet weak var message: UILabel!
-    @IBOutlet weak var receivedDt: UILabel!
     
+    @IBOutlet weak var message: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,8 +18,6 @@ class NotificationItemCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     private func enabled()->Void{
@@ -29,9 +26,8 @@ class NotificationItemCell: UITableViewCell {
     }
     
     func dataBind(notifcation: Notification){
-        self.message.text = notifcation.message;
         let dateFormat = NSDateFormatter();
         dateFormat.dateFormat = "MM-dd-yy hh:mm a";
-        self.receivedDt.text =  dateFormat.stringFromDate(notifcation.receivedDt!);
+        message.text = "\(notifcation.message) at \(dateFormat.stringFromDate(notifcation.receivedDt!))";
     }
 }

@@ -36,7 +36,7 @@ public class Notification : NSObject{
         var notification:NSDictionary = ["message": "helloworld"];
         var notifications = Notifications.instance.all();
         if(notifications.count==0){
-//            mock();
+            mock();
         }
         
         callback();
@@ -44,17 +44,13 @@ public class Notification : NSObject{
     }
     
     class func subscribe() -> Void{
-        println("Subscribing to message");
         NSNotificationCenter.defaultCenter().removeObserver(self);
-        //        NSNotificationCenter.defaultCenter().addObserver(Notification., selector: "subscribe", name: Constants.Mail, object: nil)
     }
-    
- 
     
     class func mock()-> [Notification]{
         var notification:Notification?;
         var now = NSDate();
-        notification =  Notification(message: "Hello World", description: "", receivedDt: now);
+        notification =  Notification(message: "My question essentially boils down to the best way to support dynamic heights of UILabel's (and I suppose other elements) in a UITableCell, and also correctly resize the label width/height and cell heights when rotating", description: "", receivedDt: now);
         Notifications.instance.store(notification!, callback: { () -> Void in
             println("Saved");
         });
