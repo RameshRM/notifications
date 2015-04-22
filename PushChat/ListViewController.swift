@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class ListViewController: MainViewController,UITableViewDelegate, UITableViewDataSource, ListViewProtocol {
+class ListViewController: MainViewController,UITableViewDelegate, UITableViewDataSource {
     var isSearchOn:Bool = false;
     var tableView: UITableView!
     
@@ -22,8 +22,6 @@ class ListViewController: MainViewController,UITableViewDelegate, UITableViewDat
             
         }
     };
-    var isEditing = false;
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataContext.count;
@@ -32,30 +30,29 @@ class ListViewController: MainViewController,UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = UITableViewCell();
-        cell = self.tableView.dequeueReusableCellWithIdentifier(itemCellIdentifier) as UITableViewCell;
+        cell = self.tableView.dequeueReusableCellWithIdentifier(itemCellIdentifier as String) as! UITableViewCell;
         self.onCellForRowIndexSet(cell, rowData: dataContext[indexPath.row], indexPath: indexPath, canUserInteract: isSearchOn);
         return cell;
     }
     
     override func viewDidLoad() {
-        addRefresh();
-
         super.viewDidLoad();
     }
     
     
-    func prepareTableView(itemCellId: NSString) {
+    func setupTableView(itemCellId: NSString) {
+
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.itemCellIdentifier = itemCellId;
     }
+
     
-    
-    func prepareTableView(tableView: UITableView)-> Void{
-        self.tableView = tableView;
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-    }
+//   override func prepareTableView(tableView: UITableView)-> Void{
+//        self.tableView = tableView;
+//        self.tableView.delegate = self;
+//        self.tableView.dataSource = self;
+//    }
     
     
     func getNumberOfRows() -> Int{
@@ -95,7 +92,6 @@ class ListViewController: MainViewController,UITableViewDelegate, UITableViewDat
     }
     
     func refreshList() -> Void{
-        println("Refreshing...");
         self.tableView.reloadData();
     }
     
@@ -110,9 +106,5 @@ class ListViewController: MainViewController,UITableViewDelegate, UITableViewDat
     private func addToolbar(barButtonStyle: UIBarButtonItemStyle, position: NSString){
         
     }
-    
-    @objc func onEdit(){
-        self.tableView.setEditing(!isEditing, animated: true);
-        isEditing = !isEditing;
-    }
+ 
 }

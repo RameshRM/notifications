@@ -10,9 +10,9 @@ import UIKit
 
 class HomeController: ListViewController,UISearchBarDelegate, UISearchDisplayDelegate   {
     
+
     @IBOutlet weak var listView: UITableView!
     
-    @IBOutlet weak var filterSearch: UISearchBar!
     var taskies:[AnyObject] = [AnyObject]();
     
     @IBAction func onRefresh(sender: AnyObject) {
@@ -30,17 +30,16 @@ class HomeController: ListViewController,UISearchBarDelegate, UISearchDisplayDel
     override func viewDidLoad() {
         super.viewDidLoad();
         self.tableView = listView;
-        self.prepareTableView("notificationItem");
+        self.setupTableView("notificationItem");
         self.dataContext = Notification.all(resultCB);
-        self.filterSearch.delegate=self;
     }
-        
+    
     override func onCellForRowIndexSet(tableCell: UITableViewCell, rowData: AnyObject, indexPath: NSIndexPath, canUserInteract: Bool) -> Void{
         
-        var cell = tableCell as NotificationItemCell;
-        cell.dataBind(rowData as Notification);
+        var cell = tableCell as! NotificationItemCell;
+        cell.dataBind(rowData as! Notification);
     }
-
+    
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar){
         searchBar.text = "";
@@ -79,25 +78,31 @@ class HomeController: ListViewController,UISearchBarDelegate, UISearchDisplayDel
     func searchBarTextDidEndEditing(searchBar: UISearchBar){
         searchBar.setShowsCancelButton(false, animated: true);
     }
-  
+    
     func resultCB()->Void{
-//        NSNotificationCenter.defaultCenter().removeObserver(self);
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "subscribe", name: Constants.Mail, object: nil);
-//        println("Callback");
     }
     
     @objc func subscribe() -> Void{
-        println("Subscriber callback");
-        
         var result = Notification.all(resultCB);
         self.dataContext = result;
         self.tableView.reloadData();
     }
     
     func reload(){
-        println("Reloaded ...");
         var result = Notification.all(resultCB);
         self.dataContext = result;
         self.tableView.reloadData();
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "detailItem"){
+            var detailView = segue.destinationViewController as! DetailViewController;
+            var selected = self.dataContext[self.listView.indexPathForSelectedRow()!.row] as! Notification;
+            detailView.dataContext = selected;
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
+        return 45;
     }
 }

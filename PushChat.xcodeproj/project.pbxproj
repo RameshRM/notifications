@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		904314961AE5974B009A3B34 /* NotificationDtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904314951AE5974B009A3B34 /* NotificationDtl.swift */; };
+		904314981AE59D39009A3B34 /* NotificationDetailControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904314971AE59D39009A3B34 /* NotificationDetailControllerViewController.swift */; };
+		9067F5361AE7704700A33A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9067F5341AE7704700A33A37 /* Main.storyboard */; };
 		9083CDF31ACE71D60029F98A /* AppMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9083CDF21ACE71D60029F98A /* AppMessenger.swift */; };
 		9083CDF61ACE73340029F98A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9083CDF51ACE73340029F98A /* Constants.swift */; };
 		9083CDF81ACE78E60029F98A /* FilteredListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9083CDF71ACE78E60029F98A /* FilteredListViewController.swift */; };
@@ -30,6 +33,7 @@
 		908EAC031ACE615F0057160F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 908EAC021ACE615F0057160F /* libsqlite3.dylib */; };
 		908EAC051ACE63320057160F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908EAC041ACE63320057160F /* Bolts.framework */; };
 		908EAC061ACE63320057160F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908EAC041ACE63320057160F /* Bolts.framework */; };
+		909E04C61AE5AC72001DC348 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E04C51AE5AC72001DC348 /* DetailViewController.swift */; };
 		90C96C1B1ACE6D3300FBF17D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C96C1A1ACE6D3300FBF17D /* HomeController.swift */; };
 		90C96C1D1ACE6D4000FBF17D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C96C1C1ACE6D4000FBF17D /* MainViewController.swift */; };
 		90C96C1F1ACE6D7300FBF17D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C96C1E1ACE6D7300FBF17D /* ListViewController.swift */; };
@@ -39,7 +43,6 @@
 		90D5D8911ACDEC9D005341DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D5D8901ACDEC9D005341DE /* AppDelegate.swift */; };
 		90D5D8941ACDEC9D005341DE /* PushChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D5D8921ACDEC9D005341DE /* PushChat.xcdatamodeld */; };
 		90D5D8961ACDEC9D005341DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D5D8951ACDEC9D005341DE /* ViewController.swift */; };
-		90D5D8991ACDEC9D005341DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D5D8971ACDEC9D005341DE /* Main.storyboard */; };
 		90D5D89B1ACDEC9D005341DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D5D89A1ACDEC9D005341DE /* Images.xcassets */; };
 		90D5D89E1ACDEC9D005341DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D5D89C1ACDEC9D005341DE /* LaunchScreen.xib */; };
 		90D5D8AA1ACDEC9D005341DE /* PushChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D5D8A91ACDEC9D005341DE /* PushChatTests.swift */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		904314951AE5974B009A3B34 /* NotificationDtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDtl.swift; sourceTree = "<group>"; };
+		904314971AE59D39009A3B34 /* NotificationDetailControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailControllerViewController.swift; sourceTree = "<group>"; };
+		9067F5351AE7704700A33A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PushChat/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9083CDF21ACE71D60029F98A /* AppMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMessenger.swift; sourceTree = "<group>"; };
 		9083CDF51ACE73340029F98A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9083CDF71ACE78E60029F98A /* FilteredListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredListViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 		908EAC001ACE61540057160F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		908EAC021ACE615F0057160F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		908EAC041ACE63320057160F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Downloads/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
+		909E04C51AE5AC72001DC348 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		90C96C1A1ACE6D3300FBF17D /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		90C96C1C1ACE6D4000FBF17D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		90C96C1E1ACE6D7300FBF17D /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +97,6 @@
 		90D5D8901ACDEC9D005341DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90D5D8931ACDEC9D005341DE /* PushChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PushChat.xcdatamodel; sourceTree = "<group>"; };
 		90D5D8951ACDEC9D005341DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		90D5D8981ACDEC9D005341DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90D5D89A1ACDEC9D005341DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90D5D89D1ACDEC9D005341DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		90D5D8A31ACDEC9D005341DE /* PushChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				9083CDFA1ACE799E0029F98A /* Notification.swift */,
+				904314951AE5974B009A3B34 /* NotificationDtl.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -178,6 +185,8 @@
 				90C96C1C1ACE6D4000FBF17D /* MainViewController.swift */,
 				90C96C1E1ACE6D7300FBF17D /* ListViewController.swift */,
 				9083CDF71ACE78E60029F98A /* FilteredListViewController.swift */,
+				904314971AE59D39009A3B34 /* NotificationDetailControllerViewController.swift */,
+				909E04C51AE5AC72001DC348 /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 		90D5D8821ACDEC9D005341DE = {
 			isa = PBXGroup;
 			children = (
+				9067F5341AE7704700A33A37 /* Main.storyboard */,
 				908EAC041ACE63320057160F /* Bolts.framework */,
 				908EAC021ACE615F0057160F /* libsqlite3.dylib */,
 				908EAC001ACE61540057160F /* libz.dylib */,
@@ -238,7 +248,6 @@
 				90C96C191ACE6CF000FBF17D /* Controllers */,
 				90D5D8901ACDEC9D005341DE /* AppDelegate.swift */,
 				90D5D8951ACDEC9D005341DE /* ViewController.swift */,
-				90D5D8971ACDEC9D005341DE /* Main.storyboard */,
 				90D5D89A1ACDEC9D005341DE /* Images.xcassets */,
 				90D5D89C1ACDEC9D005341DE /* LaunchScreen.xib */,
 				90D5D8921ACDEC9D005341DE /* PushChat.xcdatamodeld */,
@@ -354,7 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90D5D8991ACDEC9D005341DE /* Main.storyboard in Resources */,
+				9067F5361AE7704700A33A37 /* Main.storyboard in Resources */,
 				90D5D89E1ACDEC9D005341DE /* LaunchScreen.xib in Resources */,
 				90D5D89B1ACDEC9D005341DE /* Images.xcassets in Resources */,
 			);
@@ -376,6 +385,7 @@
 			files = (
 				9083CDFE1ACE7B2F0029F98A /* Notifications.swift in Sources */,
 				908EABEC1ACE5D480057160F /* PushNotificationController.swift in Sources */,
+				904314981AE59D39009A3B34 /* NotificationDetailControllerViewController.swift in Sources */,
 				90D5D8961ACDEC9D005341DE /* ViewController.swift in Sources */,
 				90C96C221ACE6DAB00FBF17D /* ListViewProtocol.swift in Sources */,
 				90D5D8911ACDEC9D005341DE /* AppDelegate.swift in Sources */,
@@ -383,11 +393,13 @@
 				90D5D8941ACDEC9D005341DE /* PushChat.xcdatamodeld in Sources */,
 				9083CDF31ACE71D60029F98A /* AppMessenger.swift in Sources */,
 				90C96C241ACE6DC600FBF17D /* ChangeObserverProtocol.swift in Sources */,
+				909E04C61AE5AC72001DC348 /* DetailViewController.swift in Sources */,
 				90C96C1B1ACE6D3300FBF17D /* HomeController.swift in Sources */,
 				90C96C1F1ACE6D7300FBF17D /* ListViewController.swift in Sources */,
 				9083CE021ACEDD3B0029F98A /* NotificationItemCell.swift in Sources */,
 				9083CDFB1ACE799E0029F98A /* Notification.swift in Sources */,
 				90C96C261ACE6DE600FBF17D /* SearchBarProtocol.swift in Sources */,
+				904314961AE5974B009A3B34 /* NotificationDtl.swift in Sources */,
 				9083CDF61ACE73340029F98A /* Constants.swift in Sources */,
 				9083CDF81ACE78E60029F98A /* FilteredListViewController.swift in Sources */,
 			);
@@ -413,10 +425,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		90D5D8971ACDEC9D005341DE /* Main.storyboard */ = {
+		9067F5341AE7704700A33A37 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				90D5D8981ACDEC9D005341DE /* Base */,
+				9067F5351AE7704700A33A37 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

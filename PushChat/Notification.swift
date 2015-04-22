@@ -11,6 +11,8 @@ import Foundation
 public class Notification : NSObject{
     var message: NSString?;
     var receivedDt: NSDate?;
+    var notificationDtl: NotificationDtl?;
+    var id: NSInteger?;
     
     override init(){
         super.init();
@@ -31,6 +33,8 @@ public class Notification : NSObject{
         println("Adding Notifications\(message)");
     }
     
+
+    
     
     class func all(callback:() -> Void)-> [Notification]{
         var notification:NSDictionary = ["message": "helloworld"];
@@ -38,7 +42,6 @@ public class Notification : NSObject{
         if(notifications.count==0){
             mock();
         }
-        
         callback();
         return Notifications.instance.all();
     }
@@ -50,7 +53,14 @@ public class Notification : NSObject{
     class func mock()-> [Notification]{
         var notification:Notification?;
         var now = NSDate();
-        notification =  Notification(message: "My question essentially boils down to the best way to support dynamic heights of UILabel's (and I suppose other elements) in a UITableCell, and also correctly resize the label width/height and cell heights when rotating", description: "", receivedDt: now);
+        notification =  Notification(message: "EP takes 50ms more, Some Long Text ... EP takes 50ms more, Some Long Text ...", description: "", receivedDt: now);
+        var notificationDtl = NotificationDtl();
+        notificationDtl.title = "EP Takes 50ms more";
+        notificationDtl.message = "EP Team is investigating";
+        notificationDtl.severity = "UNDER WATCH";
+        notificationDtl.action = "App Teams must be notified";
+        notification?.notificationDtl = notificationDtl;
+        
         Notifications.instance.store(notification!, callback: { () -> Void in
             println("Saved");
         });

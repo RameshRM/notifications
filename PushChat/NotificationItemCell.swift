@@ -10,7 +10,13 @@ import UIKit
 
 class NotificationItemCell: UITableViewCell {
     
-    @IBOutlet weak var message: UITextView!
+    
+    @IBOutlet weak var alert: UILabel!
+    
+    @IBOutlet weak var receivedAt: UILabel!
+    @IBOutlet weak var severityBadge: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,6 +34,33 @@ class NotificationItemCell: UITableViewCell {
     func dataBind(notifcation: Notification){
         let dateFormat = NSDateFormatter();
         dateFormat.dateFormat = "MM-dd-yy hh:mm a";
-        message.text = "\(notifcation.message) at \(dateFormat.stringFromDate(notifcation.receivedDt!))";
+        alert.text = "\(notifcation.message as! String) ";
+        receivedAt.text = dateFormat.stringFromDate(notifcation.receivedDt!);
+        
+        if(notifcation.notificationDtl != nil){
+            severityBadge.backgroundColor = severityStatus(notifcation.notificationDtl?.severity as! String);
+        }
+        
+    }
+    
+    func severityStatus(severity:String)->UIColor{
+        if(severity == "UNDER WATCH"){
+            
+        }
+        switch (severity){
+        case "UNDER WATCH":
+            return UIColor(red: 0, green: 0, blue: 255, alpha: 0.5);
+        case "NORMAL":
+            return UIColor.greenColor();
+        case "HIGH":
+            return UIColor.orangeColor();
+        case "ELEVATED":
+            return UIColor.brownColor();
+        case "SEVERE":
+            return UIColor.redColor();
+        default:
+            return UIColor.blackColor();
+        }
+        
     }
 }

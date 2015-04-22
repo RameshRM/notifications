@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.golia.mania.PushChat" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] as! NSURL
         }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -128,13 +128,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]){
         var notification = userInfo as NSDictionary;
+        var notificationDtl = notification["notification"] as! NSDictionary;
         PFPush.handlePush(userInfo);
-        Notifications.instance.send(notification["aps"] as NSDictionary);
-        var home = window?.rootViewController as UINavigationController;
-        var homeController = home.viewControllers[0] as HomeController;
-        println(homeController);
+        println(notificationDtl);
+        Notifications.instance.send(notification["aps"] as! NSDictionary, notificationDtl: notificationDtl);
+        var home = window?.rootViewController as! UINavigationController;
+        var homeController = home.viewControllers[0] as! HomeController;
         homeController.reload();
-        println("Root View Controller\(window?.rootViewController)");
     }
     
     

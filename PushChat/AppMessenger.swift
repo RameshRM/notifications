@@ -12,7 +12,7 @@ class AppMessenger{
     let detailViewCompleteKey = "DetailView.IsComplete";
     
     class func send(data: NSDictionary) -> Void{
-        NSNotificationCenter.defaultCenter().postNotificationName(Constants.Mail, object: nil, userInfo: data);
+        NSNotificationCenter.defaultCenter().postNotificationName(Constants.Mail as String, object: nil, userInfo: data as [NSObject : AnyObject]);
     }
     
     class func listen(message: NSString, callback: () -> Void) -> Void{
