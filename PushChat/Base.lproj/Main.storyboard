@@ -34,23 +34,23 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bL-uL-oQa">
-                                                    <rect key="frame" x="8" y="28" width="31" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <rect key="frame" x="8" y="28" width="32" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhf-UU-FKB">
-                                                    <rect key="frame" x="0.0" y="10" width="5" height="30"/>
+                                                    <rect key="frame" x="-5" y="10" width="10" height="30"/>
                                                     <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="5" id="0ji-Yu-ZvA"/>
+                                                        <constraint firstAttribute="width" constant="10" id="0ji-Yu-ZvA"/>
                                                         <constraint firstAttribute="height" constant="30" id="3XV-a7-2Hj"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dhf-UU-FKB" firstAttribute="top" secondItem="43O-zJ-cDo" secondAttribute="top" constant="10" id="Fcn-JT-Q35"/>
-                                                <constraint firstItem="dhf-UU-FKB" firstAttribute="leading" secondItem="43O-zJ-cDo" secondAttribute="leading" id="T4b-DG-EX9"/>
+                                                <constraint firstItem="dhf-UU-FKB" firstAttribute="leading" secondItem="43O-zJ-cDo" secondAttribute="leading" constant="-5" id="T4b-DG-EX9"/>
                                                 <constraint firstItem="UWy-R0-nyP" firstAttribute="top" secondItem="43O-zJ-cDo" secondAttribute="top" constant="5" id="jgF-nz-8Zw"/>
                                                 <constraint firstAttribute="trailing" secondItem="UWy-R0-nyP" secondAttribute="trailing" constant="5" id="n22-58-ReC"/>
                                                 <constraint firstItem="5bL-uL-oQa" firstAttribute="top" secondItem="UWy-R0-nyP" secondAttribute="bottom" constant="2" id="ohd-ra-bFa"/>
@@ -98,8 +98,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmk-iM-tyb">
-                                <rect key="frame" x="7" y="78" width="588" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="7" y="78" width="588" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

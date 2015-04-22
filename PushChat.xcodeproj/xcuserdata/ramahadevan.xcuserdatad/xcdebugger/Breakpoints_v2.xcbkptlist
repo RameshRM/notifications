@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PushChat/Notifications.swift"
-            timestampString = "451340492.161498"
+            timestampString = "451404411.464212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "addNotifications(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -96,6 +96,70 @@
             startingLineNumber = "41"
             endingLineNumber = "41"
             landmarkName = "dataBind(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PushChat/Notification.swift"
+            timestampString = "451404319.623722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "mock()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static PushChat.Notification.mock (PushChat.Notification.Type)() -&gt; Swift.Array&lt;PushChat.Notification&gt;"
+                  moduleName = "PushChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramahadevan/github.com/PushChat/PushChat/Notification.swift"
+                  timestampString = "451404411.805289"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "846">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static PushChat.Notification.(mock (PushChat.Notification.Type) -&gt; () -&gt; Swift.Array&lt;PushChat.Notification&gt;).(closure #1)"
+                  moduleName = "PushChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramahadevan/github.com/PushChat/PushChat/Notification.swift"
+                  timestampString = "451404411.80539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PushChat/Notifications.swift"
+            timestampString = "451404349.903315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "store(_:callback:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

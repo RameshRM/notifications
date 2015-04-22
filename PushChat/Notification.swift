@@ -64,6 +64,50 @@ public class Notification : NSObject{
         Notifications.instance.store(notification!, callback: { () -> Void in
             println("Saved");
         });
+        Notifications.instance.store(notification!, callback: { () -> Void in
+            println("Saved");
+        });
+        notification =  Notification(message: "EP takes 50ms more, Some Long Text ... EP takes 50ms more, Some Long Text ...", description: "", receivedDt: now);
+        notificationDtl = NotificationDtl();
+        notificationDtl.title = "EP Takes 50ms more";
+        notificationDtl.message = "EP Team is investigating";
+        notificationDtl.severity = "NORMAL";
+        notificationDtl.action = "App Teams must be notified";
+        notification?.notificationDtl = notificationDtl;
+        Notifications.instance.store(notification!, callback: { () -> Void in
+            println("Saved");
+        });
+
+        notification =  Notification(message: "EP takes 50ms more, Some Long Text ... EP takes 50ms more, Some Long Text ...", description: "", receivedDt: now);
+        notificationDtl = NotificationDtl();
+        notificationDtl.title = "EP Takes 50ms more";
+        notificationDtl.message = "EP Team is investigating";
+        notificationDtl.severity = "HIGH";
+        notificationDtl.action = "App Teams must be notified";
+        notification?.notificationDtl = notificationDtl;
+        Notifications.instance.store(notification!, callback: { () -> Void in
+            println("Saved");
+        });
+        notification =  Notification(message: "EP takes 50ms more, Some Long Text ... EP takes 50ms more, Some Long Text ...", description: "", receivedDt: now);
+        notificationDtl = NotificationDtl();
+        notificationDtl.title = "EP Takes 50ms more";
+        notificationDtl.message = "EP Team is investigating";
+        notificationDtl.severity = "ELEVATED";
+        notificationDtl.action = "App Teams must be notified";
+        notification?.notificationDtl = notificationDtl;
+        Notifications.instance.store(notification!, callback: { () -> Void in
+            println("Saved");
+        });
+        notification =  Notification(message: "EP takes 50ms more, Some Long Text ... EP takes 50ms more, Some Long Text ...", description: "", receivedDt: now);
+        notificationDtl = NotificationDtl();
+        notificationDtl.title = "EP Takes 50ms more";
+        notificationDtl.message = "EP Team is investigating";
+        notificationDtl.severity = "SEVERE";
+        notificationDtl.action = "App Teams must be notified";
+        notification?.notificationDtl = notificationDtl;
+        Notifications.instance.store(notification!, callback: { () -> Void in
+            println("Saved");
+        });
         var notifications = Notifications.instance.all();
         return notifications;
     }

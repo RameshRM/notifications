@@ -31,16 +31,17 @@ public class Notifications : NSObject{
     
     func store(entity: Notification, callback:() -> Void) -> Void{
         //Check Duplicates ...
-//        println(entity == nil);
-//        if(isExists(entity.id!)){
-//            return;
-//        }
-//        
+        //        println(entity == nil);
+        //        if(isExists(entity.id!)){
+        //            return;
+        //        }
+        //
         var temp:[Notification] = allNotifications;
         //**Store in latest Chronological Order **/
         
         if(allNotifications.count>0){
             allNotifications.removeAll(keepCapacity: false);
+            allNotifications.append(entity);
             for n in temp{
                 allNotifications.append(n);
             }
