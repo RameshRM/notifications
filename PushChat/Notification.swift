@@ -33,15 +33,15 @@ public class Notification : NSObject{
         println("Adding Notifications\(message)");
     }
     
-
+    
     
     
     class func all(callback:() -> Void)-> [Notification]{
         var notification:NSDictionary = ["message": "helloworld"];
         var notifications = Notifications.instance.all();
-        if(notifications.count==0){
-            mock();
-        }
+//        if(notifications.count==0){
+//            mock();
+//        }
         callback();
         return Notifications.instance.all();
     }
@@ -77,7 +77,7 @@ public class Notification : NSObject{
         Notifications.instance.store(notification!, callback: { () -> Void in
             println("Saved");
         });
-
+        
         notification =  Notification(message: "EP takes 50ms more, Some Long Text ... EP takes 50ms more, Some Long Text ...", description: "", receivedDt: now);
         notificationDtl = NotificationDtl();
         notificationDtl.title = "EP Takes 50ms more";
@@ -86,7 +86,7 @@ public class Notification : NSObject{
         notificationDtl.action = "App Teams must be notified";
         notification?.notificationDtl = notificationDtl;
         Notifications.instance.store(notification!, callback: { () -> Void in
-            println("Saved");
+           
         });
         notification =  Notification(message: "EP takes 50ms more, Some Long Text ... EP takes 50ms more, Some Long Text ...", description: "", receivedDt: now);
         notificationDtl = NotificationDtl();
@@ -96,7 +96,7 @@ public class Notification : NSObject{
         notificationDtl.action = "App Teams must be notified";
         notification?.notificationDtl = notificationDtl;
         Notifications.instance.store(notification!, callback: { () -> Void in
-            println("Saved");
+           
         });
         notification =  Notification(message: "EP takes 50ms more, Some Long Text ... EP takes 50ms more, Some Long Text ...", description: "", receivedDt: now);
         notificationDtl = NotificationDtl();
@@ -106,7 +106,7 @@ public class Notification : NSObject{
         notificationDtl.action = "App Teams must be notified";
         notification?.notificationDtl = notificationDtl;
         Notifications.instance.store(notification!, callback: { () -> Void in
-            println("Saved");
+           
         });
         var notifications = Notifications.instance.all();
         return notifications;

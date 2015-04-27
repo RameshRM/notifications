@@ -57,8 +57,8 @@ public class Notifications : NSObject{
     
     func send(data: NSDictionary, notificationDtl: NSDictionary) -> Void{
         var userNotification = NSMutableDictionary();
-        userNotification.setObject(data["alert"]!, forKey: "alert");
-        userNotification.setObject(data["alert"]!, forKey: "message");
+        userNotification.setObject(notificationDtl["title"]!, forKey: "alert");
+        userNotification.setObject(notificationDtl["title"]!, forKey: "message");
         userNotification.setObject(notificationDtl["title"]!, forKey: "title");
         userNotification.setObject(notificationDtl["severity"]!, forKey: "severity");
         userNotification.setObject(notificationDtl["action"]!, forKey: "action");

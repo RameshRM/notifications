@@ -55,7 +55,8 @@ class DetailViewController: UIViewController {
         case "UNDER WATCH":
             return UIColor(red: 0, green: 0, blue: 255, alpha: 0.6);
         case "NORMAL":
-            return UIColor.greenColor();
+            return UIColor.darkGrayColor();
+            
         case "HIGH":
             return UIColor.orangeColor();
         case "ELEVATED":
